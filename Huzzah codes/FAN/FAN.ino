@@ -68,29 +68,16 @@ uint8_t clearFan[] = "Fan Off";
 /*************************** Sketch Code ************************************/
 
 void fancallback(double x) 
-{  // If statements are used for debugging
+{ 
   if(x > 0)
   {
     digitalWrite(FAN,HIGH);
     sendPub.publish(setFan, sizeof(setFan));
-    /* 
-    if (! sendPub.publish(setFan, sizeof(setFan)))
-        Serial.println(F("Publish Failed."));
-    else {
-        Serial.println(F("Publish Success!"));
-    }*/
   }
   else
   {
     digitalWrite(FAN,LOW);
     sendPub.publish(clearFan, sizeof(clearFan));
-    /*
-    if (! sendPub.publish(clearFan, sizeof(clearFan)))
-        Serial.println(F("Publish Failed."));
-    else 
-    {
-        Serial.println(F("Publish Success!"));
-    }*/
   }
 }
 
