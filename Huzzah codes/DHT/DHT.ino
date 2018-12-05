@@ -21,7 +21,7 @@
  Made by Pekka Rajala, Aki Seppänen, Eemeli Tikka from Oulu University of Applied Sciences (second year students at the time)
  as part of a larger project for a remote controlled Smarthome.
  */
-
+/*****************************Libraries**************************************/
 #include <DHT.h>
 #include <ESP8266WiFi.h>
 #include "Adafruit_MQTT.h"
