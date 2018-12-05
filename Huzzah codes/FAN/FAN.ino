@@ -41,7 +41,7 @@
 #define AIO_KEY         "***********"    //Password for the above username in your broker
 #define AIO_CLIENTID    "***********"    //Device id, this needs to be unique for each of your devices connected to your broker
 
-/****Define fan pin******/
+/*********************** Define fan pin **************************************/
 #define FAN 15
 
 /************ Global State (you don't need to change this!) ******************/
