@@ -23,24 +23,25 @@
  Made by Pekka Rajala, Aki Seppänen, Eemeli Tikka from Oulu University of Applied Sciences (second year students at the time)
  as part of a larger project for a remote controlled Smarthome.
  */
-
+/*****************************Libraries**************************************/
 #include <ESP8266WiFi.h>
 #include "Adafruit_MQTT.h"
 #include "Adafruit_MQTT_Client.h"
 
 /************************* WiFi Access Point *********************************/
 
-#define WLAN_SSID       "Raspi"
-#define WLAN_PASS       "Ytrewq123"
+#define WLAN_SSID       "***********"
+#define WLAN_PASS       "***********"
 
 /************************* Adafruit.io Setup *********************************/
 
-#define AIO_SERVER      "172.20.248.132" //Broker IP or address
+#define AIO_SERVER      "***********"    //Broker IP or address
 #define AIO_SERVERPORT  1883
-#define AIO_USERNAME    "raspi"          //Username that has been set up in your broker
-#define AIO_KEY         "Ytrewq"         //Password for the above username in your broker
-#define AIO_CLIENTID    "Fan"            //Device id, this needs to be unique for each of your devices connected to your broker
+#define AIO_USERNAME    "***********"    //Username that has been set up in your broker
+#define AIO_KEY         "***********"    //Password for the above username in your broker
+#define AIO_CLIENTID    "***********"    //Device id, this needs to be unique for each of your devices connected to your broker
 
+/****Define fan pin******/
 #define FAN 15
 
 /************ Global State (you don't need to change this!) ******************/
@@ -67,12 +68,12 @@ uint8_t clearFan[] = "Fan Off";
 /*************************** Sketch Code ************************************/
 
 void fancallback(double x) 
-{
+{  // If statements are used for debugging
   if(x > 0)
   {
     digitalWrite(FAN,HIGH);
     sendPub.publish(setFan, sizeof(setFan));
-    /*
+    /* 
     if (! sendPub.publish(setFan, sizeof(setFan)))
         Serial.println(F("Publish Failed."));
     else {
@@ -93,7 +94,8 @@ void fancallback(double x)
   }
 }
 
-void setup() {
+void setup() 
+{
   Serial.begin(115200);
   delay(10);
 
@@ -113,9 +115,8 @@ void setup() {
   Serial.println("IP address: "); Serial.println(WiFi.localIP());
 
   pinMode(FAN,OUTPUT);
-
   digitalWrite(FAN,LOW);
-
+ 
   fan.setCallback(fancallback);
 
   // Setup MQTT subscription for fan.
@@ -124,7 +125,8 @@ void setup() {
 
 uint32_t x=0;
 
-void loop() {
+void loop() 
+{
   // Ensure the connection to the MQTT server is alive (this will make the first
   // connection and automatically reconnect when disconnected).  See the MQTT_connect
   // function definition further below.
