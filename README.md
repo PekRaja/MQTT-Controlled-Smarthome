@@ -9,5 +9,5 @@ All the codes should work the same with other versions of ESP8266.
 - 12v fan powered by and external power source and controlled with a mosfet. (During testing we used a 9v battery as the power source)
 - Door alarm with a buzzer
 
-We had a Raspbery pi 3 working as a WiFi-hotspot, Mqtt broker(Mosquitto), Mysql database and website host for the end devices.
+We had a Raspbery Pi 3 working as a WiFi-hotspot, Mqtt broker(Mosquitto), Mysql database and website host for the end devices.
 
