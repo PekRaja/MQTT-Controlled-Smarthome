@@ -107,34 +107,34 @@ mysqli_close($con);
 
         if (isset($_POST['abutton']))
 	{
-	shell_exec('mosquitto_pub -u (brokes user) -P (broker password) -t fan -m 1');
+	shell_exec('mosquitto_pub -u (broker user) -P (broker password) -t fan -m 1');
 	}
         if (isset($_POST['bbutton']))
         {
-	shell_exec('mosquitto_pub -u (brokes user) -P (broker password) -t fan -m 0');
+	shell_exec('mosquitto_pub -u (broker user) -P (broker password) -t fan -m 0');
         }
         if (isset($_POST['cbutton']))
         {
-        shell_exec('mosquitto_pub -u (brokes user) -P (broker password) -t h1 -m 1');
+        shell_exec('mosquitto_pub -u (broker user) -P (broker password) -t h1 -m 1');
         }
         if (isset($_POST['dbutton']))
         {
-        shell_exec('mosquitto_pub -u (brokes user) -P (broker password) -t h1 -m 0');
+        shell_exec('mosquitto_pub -u (broker user) -P (broker password) -t h1 -m 0');
         }
 	if (isset($_POST['ebutton']))
         {
-        shell_exec('mosquitto_pub -u (brokes user) -P (broker password) -t alarm -m 1');
+        shell_exec('mosquitto_pub -u (broker user) -P (broker password) -t alarm -m 1');
         }
         if (isset($_POST['fbutton']))
         {
-        shell_exec('mosquitto_pub -u (brokes user) -P (broker password) -t alarm -m 0');
+        shell_exec('mosquitto_pub -u (broker user) -P (broker password) -t alarm -m 0');
         }
         if (isset($_POST['gbutton']))
         {
-        shell_exec('mosquitto_pub -u (brokes user) -P (broker password) -t ldr -m 1');
+        shell_exec('mosquitto_pub -u (broker user) -P (broker password) -t ldr -m 1');
         }
         if (isset($_POST['hbutton']))
         {
-        shell_exec('mosquitto_pub -u (brokes user) -P (broker password) -t ldr -m 0');
+        shell_exec('mosquitto_pub -u (broker user) -P (broker password) -t ldr -m 0');
         }
 
