@@ -33,9 +33,9 @@ background: lightgray url("Smart.png") no-repeat right;
         header("Refresh: $sec; url=$page");
 
         $host = 'localhost';
-        $dbname = 'Smarthome';
-        $username = 'Pi';
-        $password = 'Ytrewq123';
+        $dbname = '**********';
+        $username = '*********';
+        $password = '**********';
         $con = mysqli_connect($host, $username, $password, $dbname);
 
         if (mysqli_connect_errno())
@@ -107,34 +107,34 @@ mysqli_close($con);
 
         if (isset($_POST['abutton']))
 	{
-	shell_exec('mosquitto_pub -u raspi -P Ytrewq -t fan -m 1');
+	shell_exec('mosquitto_pub -u (brokes user) -P (broker password) -t fan -m 1');
 	}
         if (isset($_POST['bbutton']))
         {
-	shell_exec('mosquitto_pub -u raspi -P Ytrewq -t fan -m 0');
+	shell_exec('mosquitto_pub -u (brokes user) -P (broker password) -t fan -m 0');
         }
         if (isset($_POST['cbutton']))
         {
-        shell_exec('mosquitto_pub -u raspi -P Ytrewq -t h1 -m 1');
+        shell_exec('mosquitto_pub -u (brokes user) -P (broker password) -t h1 -m 1');
         }
         if (isset($_POST['dbutton']))
         {
-        shell_exec('mosquitto_pub -u raspi -P Ytrewq -t h1 -m 0');
+        shell_exec('mosquitto_pub -u (brokes user) -P (broker password) -t h1 -m 0');
         }
 	if (isset($_POST['ebutton']))
         {
-        shell_exec('mosquitto_pub -u raspi -P Ytrewq -t alarm -m 1');
+        shell_exec('mosquitto_pub -u (brokes user) -P (broker password) -t alarm -m 1');
         }
         if (isset($_POST['fbutton']))
         {
-        shell_exec('mosquitto_pub -u raspi -P Ytrewq -t alarm -m 0');
+        shell_exec('mosquitto_pub -u (brokes user) -P (broker password) -t alarm -m 0');
         }
         if (isset($_POST['gbutton']))
         {
-        shell_exec('mosquitto_pub -u raspi -P Ytrewq -t ldr -m 1');
+        shell_exec('mosquitto_pub -u (brokes user) -P (broker password) -t ldr -m 1');
         }
         if (isset($_POST['hbutton']))
         {
-        shell_exec('mosquitto_pub -u raspi -P Ytrewq -t ldr -m 0');
+        shell_exec('mosquitto_pub -u (brokes user) -P (broker password) -t ldr -m 0');
         }
 
