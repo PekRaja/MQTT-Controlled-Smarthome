@@ -10,7 +10,6 @@ background: lightgray url("Smart.png") no-repeat right;
 	<a href="/">Index</a><br>
 	<a href="OnTime.php">Statistics</a><br>
 	<br>
-
         <button name="abutton">Fan on</button>
 	<button name="bbutton">Fan off</button> 
 	<br>
