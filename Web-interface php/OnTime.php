@@ -13,9 +13,9 @@ background: lightgray url("Smart.png") no-repeat right;
         header("Refresh: $sec; url=$page");
 
         $host = 'localhost';
-        $dbname = 'Smarthome';
-        $username = 'Pi';
-        $password = 'Ytrewq123';
+        $dbname = '**********';
+        $username = '*********';
+        $password = '**********';
         $con = mysqli_connect($host, $username, $password, $dbname);
 
         if (mysqli_connect_errno())
