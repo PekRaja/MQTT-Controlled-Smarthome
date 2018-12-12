@@ -1,15 +1,15 @@
 import paho.mqtt.client as mqtt
 import MySQLdb
-db = MySQLdb.connect(host="localhost", user="Pi", passwd="Ytrewq123", db="Smarthome")
+db = MySQLdb.connect(host="localhost", user="********", passwd="*********", db="*********")
 cal = db.cursor()
 
 # Don't forget to change the variables for the MQTT broker!
-mqtt_username = "raspi"
-mqtt_password = "Ytrewq"
+mqtt_username = "********"
+mqtt_password = "********"
 mqtt_topic = "info"
 mqtt_topic2 = "dht"
 
-mqtt_broker_ip = "172.20.248.132"
+mqtt_broker_ip = "*************"
 
 client = mqtt.Client(client_id="raspi_sub")
 # Set the username and password for the MQTT client
