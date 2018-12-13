@@ -26,3 +26,4 @@ Website codes are quite basic, but atleast they work. The background image is fr
 The buttons work by sending a terminal command to Raspberry to publish a mqtt message.
 You can also use MQTT Dash to control these devices https://play.google.com/store/apps/details?id=net.routix.mqttdash&hl=en (not ours, we just found it quite useful)
  
+When a mqtt message command is sent from the website(or MQTT Dash app) the board it concerns responds by sending a new message saying that it did a thing and based on these messages the python script makes the database entries.
