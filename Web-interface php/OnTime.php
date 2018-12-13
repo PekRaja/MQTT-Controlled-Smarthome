@@ -2,7 +2,7 @@
 <head>
 <style>
 body{
-background: lightgray url("Smart.png") no-repeat right;
+background: lightgray url("Smart.png") no-repeat center top;
 }
 </style>
 </head>
