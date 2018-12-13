@@ -1,5 +1,6 @@
 # MQTT-Controlled-Smarthome
-Oulu University of Applied Sciences, second year communications application project by Pekka Rajala, Aki Seppänen and Eemeli Tikka
+Oulu University of Applied Sciences, second year communications application project by Pekka Rajala, Aki Seppänen and Eemeli Tikka.
+
 Still updating and editing this readme file, but all the codes are finished
 
 In this project we had four Adafruit Feather HUZZAH ESP8266 devices working as different parts of a Smarthome environment.
